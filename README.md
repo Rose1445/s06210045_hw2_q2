@@ -7,8 +7,7 @@
 
 ![image](https://i.imgur.com/9DYIRXC.png)
 
-Dev-C++
-是一套免費並且開放原始碼的C++程式設計軟體，附上GNU GCC編譯器，體積小功能強大。
+Dev-C++是一套免費並且開放原始碼的C++程式設計軟體，附上GNU GCC編譯器，體積小功能強大。
 它包括多頁面視窗、工程編輯器，在工程編輯器中集合了編輯器、編譯器、連接程式和執行程式；
 也提供高亮度語法顯示的，以減少編輯錯誤。
 
@@ -20,11 +19,6 @@ Dev-C++
   - 官方連結：https://sourceforge.net/projects/orwelldevcpp/
   
 ## 主程式位置
-
-int main() 
-
-
-{ 
 
   	char X[512];
   	char Y[512]; 
@@ -89,9 +83,6 @@ int main()
 
 - C++變數型態
   - https://www.csie.ntu.edu.tw/~b98902112/cpp_and_algo/cpp/variable_type_and_declare.html
-  
-- dp入門——由分桿問題認識動態規劃
-  - https://www.cnblogs.com/mozi-song/p/9615167.html
 
 - 【C++】C++中幾種測試程式執行時間的方法
   - https://www.itread01.com/content/1548646212.html
