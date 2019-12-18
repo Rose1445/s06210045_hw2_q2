@@ -5,9 +5,12 @@
 
 ## 開發軟體環境
 
-![image](https://i.imgur.com/5MPeamM.png)
+![image](https://i.imgur.com/9DYIRXC.png)
 
-  要先在電腦上安裝 Java SDK 和 Eclipse IDE 兩套軟體。之後使用 Eclipse IDE 整合開發環境在上面建立 Java 專案，撰寫 Java 程式碼，將 Java 檔編譯成 class 檔，後直接將運行過程和結果輸出在資訊視窗中。
+Dev-C++
+這是一套免費並且開放原始碼的C++程式設計軟體,附上GNU GCC編譯器,體積小功能強大。
+它包括多頁面視窗、工程編輯器，在工程編輯器中集合了編輯器、編譯器、連接程式和執行程式。
+也提供高亮度語法顯示的，以減少編輯錯誤。
 
 ### 下載與安裝
 #### 安裝 Java SDK
