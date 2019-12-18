@@ -21,10 +21,12 @@ Dev-C++
   
 ## 主程式位置
 
-
 int main() 
+
+
 { 
-  	char X[512]; 
+
+  	char X[512];
   	char Y[512]; 
   	int  i,j,m,n;
   	int len=0;
