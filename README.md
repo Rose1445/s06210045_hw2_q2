@@ -21,97 +21,72 @@ Dev-C++
   
 ## 主程式位置
 
-  - BF法
 
-  // 取得使用者輸入的整數
-  
-		 		Scanner scanner=new Scanner(System.in);
-		 		// 輸入此次作業指定Rod Length值				
-		 		System.out.print("Rod length: ");				
-		 		int n=scanner.nextInt();				
-		 		// 輸出Maximum revenue				
-		 		System.out.println("Maximum revenue: "+BruteForceRodcutting(Price,n));
-				
-  // 雙層循環建立r和s存入切割數點，以及Maximum revenue
-  
-	static int[] s=new int[100];	
-	static int BruteForceRodcutting(int price[],int n)	
-	// Bruteforce 暴力法: 列出每種切割方案，比較出Maximum revenue	
-	// 所需時間T=O(2^n)	
-	{	
-		if(n==0)		
-			{
-				// 無法切割: return 0				
-				return 0;			
-			} 			
-		else		
-		{		
-			int  q=Integer.MIN_VALUE;  // q無窮小
-			for(int i=1;i<=n;i++)			
-			{		
-				// 取q以及已分割求得的價值中取最大值				
-				q=Math.max(q, price[i-1] + BruteForceRodcutting(price, n - i));				
-			}			
-			return q;			
-		}
-		
+int main() 
+{ 
+  	char X[512]; 
+  	char Y[512]; 
+  	int  i,j,m,n;
+  	int len=0;
+	time_t 	time1, time2;	   
+	FILE 	*fp;
+	char  cell;
+  	
+  	// 初始化 X, Y 字串  
+  	// 將內存中的內容全部設置為指定的值，做初始化工作。
+	memset(X, 0x0, sizeof(512));
+  	memset(Y, 0x0, sizeof(512));   
+  	
+  	// 讀取輸入檔
+	// 使用者輸入0讀取 hw2_lcs1.txt， 輸入1則讀取 hw2_lcs2.txt
+    printf("輸入0 讀取 hw2_lcs1.txt， 輸入1 讀取 hw2_lcs2.txt:  ");
+    scanf("%d", &i); 
+    
+    if(i==0) 
+    {
+    	// 開啟檔案，將檔案內容以字元讀入的方式，顯示在電腦螢幕上。
+    	fp = fopen("hw2_lcs1.txt", "r");
+	} 
+	else 
+	{
+		fp = fopen("hw2_lcs2.txt", "r");
 	}
 	
-   ##### 以上為主要程式內容
-
-  - BD法
-
-  // 取得使用者輸入的整數
-    
-		 		Scanner scanner=new Scanner(System.in);
-		 		// 輸入此次作業指定Rod Length值
-		 		System.out.print("Rod length: ");
-		 		int n=scanner.nextInt();
-		 		// 輸出Maximum revenue
-		 		System.out.println("Maximum revenue: "+BottomUpRodcutting(Price,n));
-		 		printCuts(Price,n);
-    
-  // 雙層循環建立r和s存入切割數點，以及Maximum revenue
-  
-	static int[] s=new int[100];
-	static int BottomUpRodcutting(int p[] ,int n) {
-	// Bottom-up BD法: 從小排到大來解
-	// 所需時間T=O(n^2)
-		 int[] r=new int[n+1];
-		 r[0]=0;
-		 s[0]=0;
-		 
-	    for(int i = 1; i <= n; i++) {
-	        int q =Integer.MIN_VALUE;
-	        for(int j = 1; j <= i; j++) {
-		        	if(q<p[j] + r[i - j])  // q為Rod Length的最大值
-		        	{
-		        		q=p[j] + r[i - j];
-		        		s[i] = j;  // s記錄取得最大Rod Price的切割點
-		        	}
-	            }
-	        r[i] = q;  // 將最大值存入r[i]中
-	        }
-	    return r[n];
-	}
-	 
-	static void printCuts(int p[],int n) {
-		// 輸出Cuts
-		System.out.print("Cuts:");
-		while(n > 0) {
-			System.out.print(s[n]+" ");
-			// 找出對應n的切割點
-			n=n-s[n];
+	// 讀入 X,Y字串 
+	while (!feof(fp))
+	{
+		fscanf(fp, "%c\n", &cell);
+		if(cell == 'x') 
+		{
+			fscanf(fp, "%s\n", X);	
+		} 
+		else 
+		{ 
+			fscanf(fp, "%s\n", Y);	
 		}
-		System.out.println();
 	}
+	// 印出 X,Y 字串 
+	printf("X=\n%s\n\n", X);
+	printf("Y=\n%s\n\n", Y);
+	
+	// 取得字串長度  
+    m = strlen(X);
+	n = strlen(Y);
+	
+	// 利用LCS長度找出LCS 
+  	len = LCS( X, Y, m, n );
+  	printf("LCS 長度 : %d\n", len ); 
+  	printf("LCS = ");
+  	print_lcs(X, m, n);
+  	printf("\n");
+	
    ##### 以上為主要程式內容
 
 ## 參考資料
 
 
-- 【從零開始學 Java 程式設計】安裝 JAVA 開發軟體
-  - http://tw-hkt.blogspot.com/2019/03/java.html
+- C++變數型態
+  - https://www.csie.ntu.edu.tw/~b98902112/cpp_and_algo/cpp/variable_type_and_declare.html
   
 - dp入門——由分桿問題認識動態規劃
   - https://www.cnblogs.com/mozi-song/p/9615167.html
