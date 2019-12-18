@@ -9,18 +9,15 @@
 
 Dev-C++
 是一套免費並且開放原始碼的C++程式設計軟體,附上GNU GCC編譯器,體積小功能強大。
-它包括多頁面視窗、工程編輯器，在工程編輯器中集合了編輯器、編譯器、連接程式和執行程式;
+它包括多頁面視窗、工程編輯器，在工程編輯器中集合了編輯器、編譯器、連接程式和執行程式；
 也提供高亮度語法顯示的，以減少編輯錯誤。
 
 ### 下載與安裝
-#### 安裝 Java SDK
+#### 安裝 Dev-C++
 
-![image](https://i.imgur.com/FwQDKpO.jpg)
-  - 可以 Goolge 搜尋 「Java SE Development Kit 8」，即可以找到目前官方最新版本。
-  - 官方連結：https://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html
-
-#### 安裝 Eclipse IDE
-  - 連結：https://www.eclipse.org/
+![image](https://i.imgur.com/gaa770w.png)
+  - 教學連結：http://selfinquiring.hatenablog.com/entry/2016/03/18/204352
+  - 官方連結：https://sourceforge.net/projects/orwelldevcpp/
   
 ## 主程式位置
 
