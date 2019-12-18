@@ -116,8 +116,8 @@
 - dp入門——由分桿問題認識動態規劃
   - https://www.cnblogs.com/mozi-song/p/9615167.html
 
-- Dynamic Programming
-  - https://jerrywang304.github.io/2017/09/18/Dynamic-Programming/
+- 【C++】C++中幾種測試程式執行時間的方法
+  - https://www.itread01.com/content/1548646212.html
   
 - Dynamic Programming - Rod Cutting
   - https://www.radford.edu/~nokie/classes/360/dp-rod-cutting.html
