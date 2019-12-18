@@ -87,5 +87,5 @@ Dev-C++是一套免費並且開放原始碼的C++程式設計軟體，附上GNU 
 - 【C++】C++中幾種測試程式執行時間的方法
   - https://www.itread01.com/content/1548646212.html
   
-- Dynamic Programming - Rod Cutting
-  - https://www.radford.edu/~nokie/classes/360/dp-rod-cutting.html
+- 演算法筆記－Longest Common Subsequence
+  - http://www.csie.ntnu.edu.tw/~u91029/LongestCommonSubsequence.html
